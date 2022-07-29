@@ -1,0 +1,15 @@
+# test environment
+test-configuration: chrome
+
+# AUT app builds
+test_app:
+    android:
+        file: 
+        package: 
+        activity: 
+ 
+# environment and specs
+page_spec_file_root: pageSpecs
+
+#Test environment for Service
+test-env: CERT

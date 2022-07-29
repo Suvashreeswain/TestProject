@@ -1,0 +1,76 @@
+timeout: 50
+
+elements:
+  homePage:
+    findBy: xpath
+    locator: //span[text()='Hello, Sign in']
+  optionsDisplayed:
+    findBy: xpath
+    locator: //*[contains(@class,'a-color-base a-text-normal')]
+  clickOnGotoHomepageButton:
+    findBy: id
+    locator: home
+  githubHomePage:
+    findBy: xpath
+    locator: //*[@class="btn-mktg width-full width-sm-auto btn-signup-mktg"]
+  signinVisible:  
+    findBy: xpath
+    locator: //*[@class="HeaderMenu-link flex-shrink-0 no-underline"]
+  clickOnSignIn:
+    findBy: xpath
+    locator: //*[@class="HeaderMenu-link flex-shrink-0 no-underline"]  
+  emailField:
+    findBy: xpath
+    locator: //*[@name="login"]
+  passwordField:
+    findBy: id
+    locator: password
+  clickonSigninButton:
+    findBy: xpath
+    locator: //*[@name="commit"]
+  serchbox:
+    findBy: id
+    locator: twotabsearchtextbox
+  clickOnSearch:
+    findBy: id
+    locator: nav-search-submit-button
+  iPhone:
+    findBy: xpath
+    locator: //*[@src="https://m.media-amazon.com/images/I/61qlnL-I5JL._AC_UY218_.jpg"]
+  AddToCart:
+    findBy: xpath
+    locator: //*[@title="Add to Shopping Cart"]
+  noThanks:
+    findBy: xpath
+    locator: //*[@id="attachSiNoCoverage"]/span/input
+  productInCart:
+    findBy: id
+    locator: sw-atc-details-single-container
+  loginEmailField:
+    findBy: xpath
+    locator: //*[@id="name"]
+  loginPasswordField:
+    findBy: xpath
+    locator: //*[@id="password"]
+  clickHomepageSignin:
+    findBy: xpath
+    locator: //*[@id="btn_send"]
+  logout:
+    findBy: xpath
+    locator: //*[@id="main"]/section/div/div/div[2]/ul/li[7]/a[2]/span
+  clickHome:
+    findBy: xpath
+    locator: //*[@id="home"]
+  shopNow:
+    findBy: xpath
+    locator: //*[@id="shop"]      
+  switchUser:
+    findBy: xpath
+    locator: //*[@id="main"]/section/div/div/div[2]/ul/li[3]/a
+  selectArtist:
+    findBy: xpath
+    locator: //*[@id="main"]/section/div/div/div[2]/ul/li[3]/div/button[1]
+  clickOnYesButton:
+    findBy: xpath
+    locator: //*[@class="swal2-confirm swal2-styled"]                   
+                                  

@@ -1,0 +1,19 @@
+# Test Configuration Registry
+chrome:
+    mode: local
+    os: windows
+    browser: chrome
+    server : https://test
+    
+sauceWeb:
+    mode: sauceWeb
+    os: windows
+    browser: chrome
+    server : https://test
+ 
+firefox:
+    mode: local
+    os: windows
+    browser: firefox
+    server : https://test
+    
