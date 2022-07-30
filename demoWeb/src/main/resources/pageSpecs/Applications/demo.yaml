@@ -72,5 +72,23 @@ elements:
     locator: //*[@id="main"]/section/div/div/div[2]/ul/li[3]/div/button[1]
   clickOnYesButton:
     findBy: xpath
-    locator: //*[@class="swal2-confirm swal2-styled"]                   
+    locator: //*[@class="swal2-confirm swal2-styled"]
+  collection:
+    findBy: xpath
+    locator: //*[@id="main"]/section/div/div/div[2]/ul/li[1]/a
+  collectionButton:
+    findBy: xpath
+    locator: //*[@id="artistmycollection"]/div/div[2]/div/div/div[1]/div[2]/div[1]
+  ProductTitleBox:
+    findBy: xpath
+    locator: //*[@id="artistaddmycoolection"]/div/div/div/div/div[2]/div/div[1]/div/div[1]/input
+  productCategory:
+    findBy: xpath
+    locator: //*[@class="ng-valid ng-touched ng-dirty"]
+  productCategoryFoodSov:
+    findBy: xpath
+    locator: //*[@id="contact"]/option[6]
+  artistPageLogout:
+    findBy: xpath
+    locator: //*[@class="bi bi-box-arrow-right"]                 
                                   

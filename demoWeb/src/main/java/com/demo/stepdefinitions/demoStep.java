@@ -252,6 +252,34 @@ public void select_on_artist_from_switch_user() throws Throwable {
     demopage.selectArtist();
 }
 
+@When("^User go to collection$")
+public void user_go_to_collection() throws Throwable {
+    demopage.collection();
+}
+
+@And("^User enter data into artist password field$")
+public void user_enter_data_into_artist_password_field() throws Throwable {
+    demopage.artistPassword();
+}
+    
+@When("^User edit product title edit box$")
+public void user_edit_product_title_edit_box() throws Throwable {
+    demopage.editProductTitleBox();
+}
+
+@And("^User click collection Edit button$")
+public void user_click_collection_edit_button() throws Throwable {
+	demopage.collectionButton();
+	
+}
+@And("^User go to Product Category drop down and select$")
+public void user_go_to_product_category_drop_down_and_select() throws Throwable {
+    demopage.productCategory();
+}
+@And("^Click on Artist pagelogs out button$")
+public void click_on_artist_pagelogs_out_button() throws Throwable {
+    demopage.artistPageLogout();
+}
 }
 
 

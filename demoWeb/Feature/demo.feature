@@ -42,7 +42,7 @@ Feature: Amazon Home Page
     And Close browser
     
     @Biskanetest
-    Scenario: Verify login functionality on Biskane login page
+    Scenario: Verify Dashboard page on Biskane
      Given User go to Biskane page url
      When User enter data into email field
      And User enter data into password field
@@ -51,7 +51,7 @@ Feature: Amazon Home Page
      And Click on logs out button
     
     @BiskanetestLogin
-    Scenario: Verify login functionality on Biskane login page
+    Scenario: Verify shop page on Biskane 
      Given User go to Biskane page url
      When User enter data into email field
      And User enter data into password field
@@ -61,10 +61,10 @@ Feature: Amazon Home Page
      And click on Shop now
      Then Verify shop page
      When Counts number of elements in the categories
-     #And Click on logs out button
+     And Click on logs out button
      
      @SwitchUser
-     Scenario: Verify login functionality on Biskane login page
+     Scenario: Switch user functionality on Biskane page
      Given User go to Biskane page url
      When User enter data into email field
      And User enter data into password field
@@ -74,11 +74,18 @@ Feature: Amazon Home Page
      And Select on Artist from switch user
      When Click on Yes button
      Then Verify Artist page
+     And Click on logs out button
      
      @BiskaneTestMyCollection
-     Scenario: Verify login functionality on Biskane login page
+     Scenario: Verify my collection on 
      Given User go to Biskane page url
      When User enter data into email field
-     And User enter data into password field
+     And User enter data into artist password field
      When User click on SignIn
-     Then Verify Dashboard page     
+     Then Verify Dashboard page
+     When User go to collection
+     And User click collection Edit button
+     When User edit product title edit box
+     And User go to Product Category drop down and select
+     And Click on Artist pagelogs out button
+          

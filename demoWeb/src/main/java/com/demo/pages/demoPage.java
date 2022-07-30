@@ -10,6 +10,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.demo.automation.framework.TestSession;
@@ -332,14 +333,14 @@ public class demoPage extends MobileWebViewPage {
 
 		session.driver.close();
 	}
-	
+
 	//------------Below steps are for Biskane page validation scenario-------------------------//
 	/**
 	 * This method is to goto Biskane QA Home page
 	 */
 	public void biskanePageURL() {
 
-	session.driver.get("https://qa.biskane.com/login");
+		session.driver.get("https://qa.biskane.com/login");
 
 	}
 	/**
@@ -392,14 +393,14 @@ public class demoPage extends MobileWebViewPage {
 	public void clickHome() {
 		element("clickHome").click();
 	}
-	
+
 	/**
 	 * This method is to click on shop now  button
 	 * @return
 	 */
 	public void clickShopNow() {
 		element("shopNow").click();
-		
+
 	}
 	/**
 	 * This method is to validate shop page title
@@ -413,9 +414,12 @@ public class demoPage extends MobileWebViewPage {
 		else 
 			return false;
 	}
-
+	/**
+	 * This method is to count number of categories in shop page
+	 * 
+	 */
 	public void numberOfElements() {
-	
+
 		List<WebElement> links =session.driver.findElements(By.xpath("//*[@data-aos=\"fade-up\"]"));
 		WebDriverWait wait = new WebDriverWait(session.driver, 30);
 		wait.until(ExpectedConditions.numberOfElementsToBe(By.xpath("//*[@data-aos=\"fade-up\"]"),0));
@@ -423,24 +427,33 @@ public class demoPage extends MobileWebViewPage {
 		//for (WebElement categorieslinksText : links) {
 
 		//	System.out.println("Number of categories names:"+categorieslinksText.getText());
-			
-	//	}
-	}
 
+		//	}
+	}
+	/**
+	 * This method is to click on switch user
+	 */
 	public void clickOnSwitchUser() {
 		element("switchUser").click();	
 	}
-
+	/**
+	 * This method is to select Artist from switch user drop down menu.
+	 */
 	public void selectArtist() {
 		element("selectArtist").click();
-		
-	}
 
+	}
+	/**
+	 * This method is to click on yes button.
+	 */
 	public void clickOnYesButton() {
 		element("clickOnYesButton").click();
-		
-	}
 
+	}
+	/**
+	 * This method is to validate artist home page.
+	 * @return
+	 */
 	public boolean validateArtistPage() {
 		String ActArtistPage=session.driver.getTitle();
 		String ExpArtistPage=("NATIVE AMERICAN AND INDIGENOUS ARTS");
@@ -448,8 +461,56 @@ public class demoPage extends MobileWebViewPage {
 			return true;	
 		else 
 			return false;
-	
-}
+
+	}
+	/**
+	 * This method is to enter data in to artist password field
+	 */
+	public void artistPassword() {
+		element("loginPasswordField").sendKeys("Artist@123");
+
+	}
+	/**
+	 * This method is to click on collection
+	 */
+	public void collection() {
+		element("collection").click();
+
+	}
+	/**
+	 * This method is to 
+	 * @throws InterruptedException 
+	 */
+	public void collectionButton() throws InterruptedException {
+		element("collectionButton").click();
+		Thread.sleep(5000);
+	}
+	/**
+	 *
+	 * This method is to clear the product text box and send text to text box
+	 */
+	public void editProductTitleBox() {
+
+		element("ProductTitleBox").clear();
+		element("ProductTitleBox").sendKeys("Jellyfish");
+	}
+	/**
+	 * This method is to select item from product Category drop down
+	 */
+	public void productCategory() {
+		element("productCategory").click();
+		//element("productCategory");
+		//Select sel=new Select(element("productCategory"));
+		//sel.selectByVisibleText("Home & Life");
+		element("productCategoryFoodSov").click();
+	}
+	/**
+	 * This method is to click logout button on Artist page 
+	 */
+	public void artistPageLogout() {
+		element("artistPageLogout").click();
+
+	}
 
 }
 
