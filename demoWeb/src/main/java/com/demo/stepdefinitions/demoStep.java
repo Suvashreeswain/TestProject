@@ -198,7 +198,10 @@ public void user_enter_data_into_email_field() throws Throwable {
 public void user_click_on_signin() throws Throwable {
     demopage.clickHomepageSignin();
 }
-
+@When("^Change profile picture$")
+public void change_profile_picture() throws Throwable {
+    demopage.ChangeProfilePic();
+}
 @Then("^Verify Dashboard page$")
 public void verify_dashboard_page() throws Throwable {
 	 Assert.assertTrue(demopage.validateDashboard());
@@ -280,10 +283,47 @@ public void user_go_to_product_category_drop_down_and_select() throws Throwable 
 public void click_on_artist_pagelogs_out_button() throws Throwable {
     demopage.artistPageLogout();
 }
+@When("^Click on submit button$")
+public void click_on_submit_button() throws Throwable {
+    demopage.submit();
 }
 
+@Then("^Verify product title is changed$")
+public void verify_product_title_is_changed() throws Throwable {
+	Assert.assertTrue(demopage.productTitle());
+}
+@And("^Delete a collection and click on delete button$")
+public void delete_a_collection_and_click_on_delete_button() throws Throwable {
+    demopage.deleteCollection();
 
+}
+@When("^Click on Art button$")
+public void click_on_art_button() throws Throwable {
+	demopage.artButton();
+}
 
+@When("^Click on DashBoard button$")
+public void click_on_dashboard_button() throws Throwable {
+    demopage.dashBoard();
+}
+@When("^Click on added to cart button$")
+public void click_on_added_to_cart_button() throws Throwable {
+    demopage.addedToCartButton();
+}
+@Then("^Verify item added to cart$")
+public void verify_item_added_to_cart() throws Throwable {
+	Assert.assertTrue(demopage.addedToCart());
+}
+
+@And("^Click on buy now button$")
+public void click_on_buy_now_button() throws Throwable {
+    demopage.buyNowButton();
+}
+@And("^Scroll down till Add to cart button is visible$")
+public void scroll_down_till_add_to_cart_button_is_visible() throws Throwable {
+    demopage.addToCartButtonVisible();
+}
+}
 
 
 

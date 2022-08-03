@@ -47,7 +47,8 @@ Feature: Amazon Home Page
      When User enter data into email field
      And User enter data into password field
      When User click on SignIn
-     Then Verify Dashboard page
+     #Then Verify Dashboard page
+     When Change profile picture
      And Click on logs out button
     
     @BiskanetestLogin
@@ -87,5 +88,25 @@ Feature: Amazon Home Page
      And User click collection Edit button
      When User edit product title edit box
      And User go to Product Category drop down and select
+     When Click on submit button
+     Then Verify product title is changed
+     And Delete a collection and click on delete button
      And Click on Artist pagelogs out button
-          
+     
+     @BiskaneShopPage
+     Scenario: Test scenario in BiskaneShopPage
+     Given User go to Biskane page url
+     When User enter data into email field
+     And User enter data into artist password field
+     When User click on SignIn
+     Then Verify Dashboard page
+     When User click on Home
+     Then Verify shop page
+     And click on Shop now
+     When Click on Art button
+     And Click on buy now button
+     And Scroll down till Add to cart button is visible
+     When Click on added to cart button
+     Then Verify item added to cart
+     When Click on DashBoard button	
+     And Click on Artist pagelogs out button

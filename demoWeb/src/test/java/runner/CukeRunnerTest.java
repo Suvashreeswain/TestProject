@@ -23,7 +23,7 @@ import cucumber.api.junit.Cucumber;
 
 		glue = { "com.demo.stepdefinitions" }
 
-		, tags = { "@BiskaneTestMyCollection" }
+		, tags = { "@Biskanetest" }
 
 		, features = { "Feature/" }
 

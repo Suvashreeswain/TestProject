@@ -55,6 +55,9 @@ elements:
   clickHomepageSignin:
     findBy: xpath
     locator: //*[@id="btn_send"]
+  chooseFile:
+    findBy: xpath
+    locator: //*[@id="myFile"]
   logout:
     findBy: xpath
     locator: //*[@id="main"]/section/div/div/div[2]/ul/li[7]/a[2]/span
@@ -63,7 +66,7 @@ elements:
     locator: //*[@id="home"]
   shopNow:
     findBy: xpath
-    locator: //*[@id="shop"]      
+    locator: //*[@id="shop"]
   switchUser:
     findBy: xpath
     locator: //*[@id="main"]/section/div/div/div[2]/ul/li[3]/a
@@ -91,4 +94,30 @@ elements:
   artistPageLogout:
     findBy: xpath
     locator: //*[@class="bi bi-box-arrow-right"]                 
-                                  
+  submit:
+    findBy: xpath
+    locator: //*[@id="artistaddmycoolection"]/div/div/div/div/div[2]/div/div[9]/div/div[2]
+  productTitle:
+    findBy: xpath
+    locator: //*[@id="artistmycollection"]
+  deleteCollection:
+    findBy: xpath
+    locator: //*[@id="artistmycollection"]/div/div[2]/div/div/div[1]/div[2]/div[2]
+  delete:
+    findBy: xpath
+    locator: //html/body/ngb-modal-window/div/div/app-delete-coll-confirm-modal/div[3]/button[1]
+  artButton:
+    findBy: xpath
+    locator: //*[@id="searchart"]/div/div/div/div/div[1]/a/p
+  dashBoard:
+    findBy: xpath
+    locator: //*[@id="dashboard"]
+  addedToCartButton:
+    findBy: xpath
+    locator: //*[@id="storelist"]/div[1]/div/div[2]/div/div/div/button[1]     
+  buyNowButton:
+    findBy: xpath
+    locator: //*[@id="artlisting"]/div/div/div/div/div[1]/a/button
+  addedToCart:
+    findBy: xpath
+    locator: //*[@id="notification"]/i                                                 

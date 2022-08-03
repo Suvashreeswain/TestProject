@@ -1,14 +1,25 @@
 package com.demo.pages;
 
 
+import java.net.URL;
+import java.sql.Driver;
+import java.time.Duration;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import javax.mail.Session;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.ImmutableCapabilities;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebDriver.Window;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Action;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.remote.LocalFileDetector;
+import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.remote.RemoteWebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -416,19 +427,25 @@ public class demoPage extends MobileWebViewPage {
 	}
 	/**
 	 * This method is to count number of categories in shop page
+	 * @throws InterruptedException 
 	 * 
 	 */
-	public void numberOfElements() {
+	public void numberOfElements() throws InterruptedException {
 
-		List<WebElement> links =session.driver.findElements(By.xpath("//*[@data-aos=\"fade-up\"]"));
-		WebDriverWait wait = new WebDriverWait(session.driver, 30);
-		wait.until(ExpectedConditions.numberOfElementsToBe(By.xpath("//*[@data-aos=\"fade-up\"]"),0));
+		//	WebDriverWait wait = new WebDriverWait(session.driver, 30);
+		//	wait.until(ExpectedConditions.numberOfElementsToBe(By.xpath("//div[@data-aos='fade-up']"),0));
+
+		Thread.sleep(10000);
+		List<WebElement> links =session.driver.findElements(By.xpath("//div[@data-aos='fade-up']"));
+		//List<WebElement> links =session.driver.findElements(By.xpath("//*[@class='row']"));
+		//Thread.sleep(5000);
 		System.out.println("Count number of categories:"+links.size());
-		//for (WebElement categorieslinksText : links) {
 
-		//	System.out.println("Number of categories names:"+categorieslinksText.getText());
+		for (WebElement categorieslinksText : links) {
 
-		//	}
+			System.out.println("Number of categories names:"+categorieslinksText.getText());
+
+		}
 	}
 	/**
 	 * This method is to click on switch user
@@ -511,6 +528,100 @@ public class demoPage extends MobileWebViewPage {
 		element("artistPageLogout").click();
 
 	}
+	/**
+	 * This method is to click on submit button
+	 */
+	public void submit() {
+		element("submit").click();
+
+	}
+	/**
+	 * This method is to verify product title is edited and changed
+	 * @return
+	 */
+	public boolean productTitle() {
+		WebDriverWait wait = new WebDriverWait(session.driver, 30);
+		return wait.until(ExpectedConditions.visibilityOf(element("productTitle"))).isDisplayed();
+	}
+	/**
+	 * This method is to change profile picture
+	 * @throws InterruptedException
+	 */
+	public void ChangeProfilePic() throws InterruptedException {
+		//Thread.sleep(5000);
+		element("chooseFile").sendKeys("/Users/sabyasachinayak/Desktop/pinky/smiling.jpg");
+		//Thread.sleep(5000);
+		
+		
+//		Thread.sleep(5000);
+//		WebElement chooseFile = session.driver.findElement(By.xpath("//*[@id=\"myFile\"]"));
+//		chooseFile.sendKeys("/Users/sabyasachinayak/Desktop/pinky/smiling.jpg");
+//		Thread.sleep(5000);
+		
+		
+		
+//		Thread.sleep(5000);
+//		String fileXpath = "//*[@id=\"myFile\"]";
+//		WebElement chooseFile = session.driver.findElement(By.xpath(fileXpath));
+//		String filePath = "/Users/sabyasachinayak/Desktop/pinky/smiling.jpg";
+//		chooseFile.sendKeys(filePath);
+//		WebElement updateBtn = session.driver.findElement(By.xpath("//*[@id=\"btn_send\"]"));
+//		updateBtn.click();
+//		Thread.sleep(5000);
+
+	}
+	/**
+	 * This method is to delete collection from collection list
+	 * 
+	 */
+	public void deleteCollection() {
+		element("deleteCollection").click();
+		element("delete").click();
+	}
+	/**
+	 * This method is to click on art button
+	 */
+	public void artButton() {
+		element("artButton").click();
+
+	}
+	/**
+	 * This method is to click on dash board
+	 */
+	public void dashBoard() {
+		element("dashBoard").click();
+	}
+	/**
+	 * This method is to verify item is visible in cart
+	 * @return
+	 */
+	public boolean addedToCart() {
+		WebDriverWait wait = new WebDriverWait(session.driver, 30);
+		return wait.until(ExpectedConditions.visibilityOf(element("addedToCart"))).isDisplayed();
+	}	
+	/**
+	 * This method is to click on buy now button
+	 */
+	public void buyNowButton() {
+		element("buyNowButton").click();
+
+	}
+	/**
+	 * This method is to Scroll down till Add to cart button is visible 
+	 */
+	public void addToCartButtonVisible(){
+		JavascriptExecutor javase = (JavascriptExecutor)session.driver;
+		javase.executeScript("window.scrollBy(0,-400)");
+	}
+	/**
+	 * This method is to click on add to cart button
+	 * 
+	 */
+	public void addedToCartButton() {
+		element("addedToCartButton").click();
+
+	}
+
 
 }
 
