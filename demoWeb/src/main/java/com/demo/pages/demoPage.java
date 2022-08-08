@@ -342,7 +342,7 @@ public class demoPage extends MobileWebViewPage {
 	 */
 	public void closeBrowser() {
 
-		session.driver.close();
+		//session.driver.close();
 	}
 
 	//------------Below steps are for Biskane page validation scenario-------------------------//
@@ -738,10 +738,12 @@ public class demoPage extends MobileWebViewPage {
 	}
 	/**
 	 * This method is to click on submit button 
+	 * @throws InterruptedException 
 	 */
-	public void collectionSubmitButton() {
+	public void collectionSubmitButton() throws InterruptedException {
+		Thread.sleep(5000);
 		element("collectionSubmitButton").click();
-
+		Thread.sleep(5000);
 	}
 	/**
 	 * This method is to add product details
@@ -770,6 +772,7 @@ public class demoPage extends MobileWebViewPage {
 	 */
 	public void updatePriceButton() {
 		element("updatePrice").click();
+	
 
 	}
 	/*
@@ -782,7 +785,8 @@ public class demoPage extends MobileWebViewPage {
 	/*
 	 * This method is to add cost of the item
 	 */
-	public void addCostOfItem() {
+	public void addCostOfItem() throws InterruptedException {
+		Thread.sleep(5000);
 		element("costOfItem").sendKeys("100");
 	}
 	/*
@@ -809,10 +813,10 @@ public class demoPage extends MobileWebViewPage {
 		WebElement Width=session.driver.findElement(By.xpath("//*[@id=\"artistaddmycoolection\"]/div/div/div/div/div[2]/div/div[7]/div/div[2]/div/div[5]"));
 		WebElement height=session.driver.findElement(By.xpath("//*[@id=\"artistaddmycoolection\"]/div/div/div/div/div[2]/div/div[7]/div/div[3]/div/div[5]"));
 		Actions action= new Actions(session.driver);
-		action.dragAndDropBy(length, 60, 10).perform();
-		action.dragAndDropBy(Width, 60, 10).perform();
-		action.dragAndDropBy(height, 70, 10).perform();
-
+		action.dragAndDropBy(length, 60, 1).perform();
+		action.dragAndDropBy(Width, 50, 1).perform();
+		action.dragAndDropBy(height, 60, 1).perform();
+		Thread.sleep(5000);
 	}
 	/*
 	 * This method is to add quantity of the product

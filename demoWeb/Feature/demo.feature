@@ -167,5 +167,5 @@ Feature: Amazon Home Page
      And Click on Art type radio button
      And Add Length and Width and Height of the item
      When Click on new collection submit button
-     And Click on shop page logs out button
+     #And Click on shop page logs out button
       

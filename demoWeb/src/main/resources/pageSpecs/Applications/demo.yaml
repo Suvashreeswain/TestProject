@@ -56,8 +56,8 @@ elements:
     findBy: xpath
     locator: //*[@id="btn_send"]
   chooseFile:
-    findBy: cssSelector
-    locator: label[for='myFile']
+    findBy: xpath
+    locator: //*[@id="myFile"]
   logout:
     findBy: xpath
     locator: //*[@id="main"]/section/div/div/div[2]/ul/li[7]/a[2]/span
@@ -177,10 +177,10 @@ elements:
     locator: //*[@id="artistaddmycoolection"]/div/div/div/div/div[2]/div/div[1]/div/div[1]/input
   costOfItem:
     findBy: xpath
-    locator: //*[@id="price1"]
+    locator: //*[@id="artistaddmycoolection"]/div/div/div/div/div[2]/div/div[2]/div[2]/div[1]//*[@id="price1"]
   art:
     findBy: xpath
-    locator: //*[@placeholder="Product Price (CAD)"]      
+    locator: //*[@id="contact"]/option[3]      
   description:
     findBy: xpath
     locator: //*[@id="artistaddmycoolection"]/div/div/div/div/div[2]/div/div[2]/div[1]/textarea
@@ -192,7 +192,7 @@ elements:
     locator: //*[@id="text1"]/option[3]      
   updatePrice:
     findBy: xpath
-    locator: //*[@id="artistaddmycoolection"]/div/div/div/div/div[2]/div/div[2]/div[2]/div[6]/div[2]
+    locator: //*[@id="artistaddmycoolection"]/div/div/div/div/div[2]/div/div[2]/div[2]/div[6]/div[2]/button
   length:
     findBy: xpath
     locator: //*[@id="artistaddmycoolection"]/div/div/div/div/div[2]/div/div[7]/div/div[1]/div/div[5]
@@ -210,7 +210,7 @@ elements:
     locator: (//input[@id='days1'])[1]                     
   collectionSubmitButton:
     findBy: xpath
-    locator: //*[@id="btn_send"]
+    locator: //*[@id="artistaddmycoolection"]/div/div/div/div/div[2]/div/div[9]/div/div[2]//*[@id="btn_send"]
   shopPageLogout:
     findBy: xpath
     locator: //*[@id="main"]/section/div/div/div[2]/ul/li[9]/a[2]/span
