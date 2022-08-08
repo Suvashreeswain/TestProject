@@ -323,6 +323,164 @@ public void click_on_buy_now_button() throws Throwable {
 public void scroll_down_till_add_to_cart_button_is_visible() throws Throwable {
     demopage.addToCartButtonVisible();
 }
+@When("^User click on orders$")
+public void user_click_on_orders() throws Throwable {
+    demopage.clickOnOrder();
+}
+
+@When("^Click on select from drop down$")
+public void click_on_select_from_drop_down() throws Throwable {
+    demopage.clickOnSelect();
+}
+
+@When("^Click on Go button$")
+public void click_on_go_button() throws Throwable {
+    demopage.clickOnGo();
+}
+
+@And("^User click on select search type$")
+public void user_click_on_select_search_type() throws Throwable {
+    demopage.clickSelectType();
+}
+
+@And("^Click on Ok button$")
+public void click_on_ok_button() throws Throwable {
+    demopage.clickOnOkButton();
+}
+@When("^Click on refunds button$")
+public void click_on_refunds_button() throws Throwable {
+    demopage.ClickRefund();
+}
+
+@When("^Click on refund pending action button$")
+public void click_on_refund_pending_action_button() throws Throwable {
+ 
+    demopage.actionButton();
+}
+
+@When("^Enter text to comment box$")
+public void enter_text_to_comment_box() throws Throwable {
+    demopage.commentBox();
+}
+
+@Then("^Verify refund status$")
+public void verify_refund_status() throws Throwable {
+	Assert.assertTrue(demopage.refundStatus());
+}
+
+@And("^Click on next page button$")
+public void click_on_next_page_button() throws Throwable {
+    demopage.nextPageButton();
+}
+
+@And("^Add QTY No of item to refund$")
+public void add_qty_no_of_item_to_refund() throws Throwable {
+    demopage.clickQTYbutton();
+}
+
+@And("^Click on Approve button$")
+public void click_on_approve_button() throws Throwable {
+    demopage.clickApprove();
+}
+@When("^User click on my shop button$")
+public void user_click_on_my_shop_button() throws Throwable {
+    demopage.myShopButton();
+}
+
+@When("^Click on add new collection button$")
+public void click_on_add_new_collection_button() throws Throwable {
+    demopage.addCollectionButton();
+}
+
+@When("^Click on new collection submit button$")
+public void click_on_new_collection_submit_button() throws Throwable {
+    demopage.collectionSubmitButton();
+}
+
+@Then("^Verify my shop page$")
+public void verify_my_shop_page() throws Throwable {
+	Assert.assertTrue(demopage.shoppage());
+}
+
+@And("^User enter password$")
+public void user_enter_password() throws Throwable {
+    demopage.storePassword();
+}
+
+@And("^Click on my collection button$")
+public void click_on_my_collection_button() throws Throwable {
+	demopage.newCollectionButton();
+}
+
+@And("^Add all the product details$")
+public void add_all_the_product_details() throws Throwable {
+    demopage.productDetails();    
+}
+@When("^Add product title$")
+public void add_product_title() throws Throwable {
+    demopage.productTit();
+}
+
+@When("^Add product Description$")
+public void add_product_description() throws Throwable {
+    demopage.productDescription();
+}
+
+@When("^Click on update price button$")
+public void click_on_update_price_button() throws Throwable {
+    demopage.updatePriceButton();
+}
+
+@When("^Select option from weight type$")
+public void select_option_from_weight_type() throws Throwable {
+    demopage.weightType();
+}
+
+@When("^Add PreOrder days$")
+public void add_preorder_days() throws Throwable {
+   demopage.PreOrderdays();
+}
+@And("^Click on Art type radio button$")
+public void click_on_art_type_radio_button() throws Throwable {
+    demopage.artTypeRadioButton();
+}
+@And("^Select Art from product category$")
+public void select_art_from_product_category() throws Throwable {
+    demopage.artProductCategory();
+}
+
+@And("^Add cost of the item$")
+public void add_cost_of_the_item() throws Throwable {
+    demopage.addCostOfItem();
+}
+
+@And("^Add Maximum no of items per parcel$")
+public void add_maximum_no_of_items_per_parcel() throws Throwable {
+    demopage.maxItem();
+}
+
+@And("^Select approx weight box$")
+public void select_approx_weight_box() throws Throwable {
+    demopage.selectWeight();
+}
+
+@And("^Add Quantity in quantity box$")
+public void add_quantity_in_quantity_box() throws Throwable {
+    demopage.quantity();
+}
+
+@And("^Add Length and Width and Height of the item$")
+public void add_length_and_width_and_height_of_the_item() throws Throwable {
+    demopage.productSize();
+}
+@And("^Click on shop page logs out button$")
+public void click_on_shop_page_logs_out_button() throws Throwable {
+    demopage.shopPageLogout();
+}
+@And("^Click on image submit button$")
+public void click_on_image_submit_button() throws Throwable {
+    demopage.imageSubmit();
+}
 }
 
 

@@ -548,26 +548,10 @@ public class demoPage extends MobileWebViewPage {
 	 * @throws InterruptedException
 	 */
 	public void ChangeProfilePic() throws InterruptedException {
-		//Thread.sleep(5000);
-		element("chooseFile").sendKeys("/Users/sabyasachinayak/Desktop/pinky/smiling.jpg");
-		//Thread.sleep(5000);
-		
-		
-//		Thread.sleep(5000);
-//		WebElement chooseFile = session.driver.findElement(By.xpath("//*[@id=\"myFile\"]"));
-//		chooseFile.sendKeys("/Users/sabyasachinayak/Desktop/pinky/smiling.jpg");
-//		Thread.sleep(5000);
-		
-		
-		
-//		Thread.sleep(5000);
-//		String fileXpath = "//*[@id=\"myFile\"]";
-//		WebElement chooseFile = session.driver.findElement(By.xpath(fileXpath));
-//		String filePath = "/Users/sabyasachinayak/Desktop/pinky/smiling.jpg";
-//		chooseFile.sendKeys(filePath);
-//		WebElement updateBtn = session.driver.findElement(By.xpath("//*[@id=\"btn_send\"]"));
-//		updateBtn.click();
-//		Thread.sleep(5000);
+
+		element("chooseFile").sendKeys("/Users/sabyasachinayak/Desktop/pinky/candle.jpg");
+
+
 
 	}
 	/**
@@ -621,9 +605,257 @@ public class demoPage extends MobileWebViewPage {
 		element("addedToCartButton").click();
 
 	}
+	/**
+	 * This method is to click on order button
+	 */
+	public void clickOnOrder() {
+		element("clickOnOrder").click();
 
+	}
+	/**
+	 * This method is to click on select button
+	 */
+	public void clickOnSelect() {
+		element("clickOnSelect").click();
 
+	}
+	/**
+	 * This method is to select shipped from drop down box
+	 */
+
+	public void clickSelectType() {
+		element("clickSelectType").click();
+
+	}
+	/**
+	 * This method is to click on ok button
+	 */
+	public void clickOnOkButton() {
+		element("clickOn").click();
+
+	}
+	/**
+	 * This method is to click on go button
+	 */
+
+	public void clickOnGo() {
+		element("clickOnGo").click();
+
+	}
+	/**
+	 * This method is to click on refund button
+	 */
+	public void ClickRefund() {
+		element("ClickRefund").click();
+
+	}
+	/**
+	 * This method is to verify refund status
+	 * @return
+	 */
+	public boolean refundStatus() {
+		WebDriverWait wait = new WebDriverWait(session.driver, 30);
+		return wait.until(ExpectedConditions.visibilityOf(element("refundStatus"))).isDisplayed();
+	}
+	/**
+	 * This method is go to next page 
+	 */
+	public void nextPageButton() {
+		element("nextPage").click();
+
+	}
+	/**
+	 * This method is to send text to comment box
+	 * @throws InterruptedException 
+	 */
+	public void commentBox() throws InterruptedException {
+		Thread.sleep(3000);
+		element("commentBox").clear();
+		element("commentBox").sendKeys("Refund");
+
+	}
+	/**
+	 * This method is to click on action button
+	 * @throws InterruptedException 
+	 */
+	public void actionButton() throws InterruptedException {
+		Thread.sleep(4000);
+		element("actionButton").click();
+
+	}
+	/**
+	 * This method is to select NO.of ITEM to REFUND
+	 * @throws InterruptedException 
+	 */
+	public void clickQTYbutton() throws InterruptedException {
+		Thread.sleep(3000);
+		element("clickQTYbutton").clear();
+		element("clickQTYbutton").sendKeys("1");
+
+	}
+	/**
+	 * This method is to click on approve button
+	 */
+	public void clickApprove() {
+		element("clickApprove").click();
+
+	}
+	/**
+	 * This method is to send password to password field 
+	 */
+	public void storePassword() {
+		element("loginPasswordField").sendKeys("Store@123");	
+
+	}
+	/**
+	 * This method is to click on my shop button
+	 */
+	public void myShopButton() {
+
+		element("myShopButton").click();
+	}
+	/**
+	 * This method is to verify shop page
+	 * @return
+	 */
+	public boolean shoppage() {
+		WebDriverWait wait = new WebDriverWait(session.driver, 30);
+		return wait.until(ExpectedConditions.visibilityOf(element("shoppage"))).isDisplayed();
+	}
+	/**
+	 * This method is click on collection button
+	 */
+	public void newCollectionButton() {
+		element("newCollectionButton").click();
+
+	}
+	/**
+	 * This method is to click on add new collection button
+	 */
+	public void addCollectionButton() {
+		element("addCollectionButton").click();
+
+	}
+	/**
+	 * This method is to click on submit button 
+	 */
+	public void collectionSubmitButton() {
+		element("collectionSubmitButton").click();
+
+	}
+	/**
+	 * This method is to add product details
+	 */
+
+	public void productDetails() {
+		element("productImage").sendKeys("/Users/sabyasachinayak/Desktop/pinky/painting.jpg");
+
+	}
+	/*
+	 * This method is to write product title
+	 */
+	public void productTit() {
+		element("productTitle").sendKeys("Painting");
+	}
+	/*
+	 * This method is to add product description
+	 */
+
+	public void productDescription() {
+		element("description").sendKeys("Nice Painting");
+
+	}
+	/*
+	 * This method is to click on price button
+	 */
+	public void updatePriceButton() {
+		element("updatePrice").click();
+
+	}
+	/*
+	 *This method is to select Art from Product Category
+	 */
+	public void artProductCategory() {
+		element("art").click();
+
+	}
+	/*
+	 * This method is to add cost of the item
+	 */
+	public void addCostOfItem() {
+		element("costOfItem").sendKeys("100");
+	}
+	/*
+	 * This method is to select weight 
+	 */
+	public void selectWeight() {
+
+		element("weight").clear();
+		element("weight").sendKeys("1");
+	}
+	/*
+	 * This method is to select weight type
+	 */
+	public void weightType() {
+		element("weightType").click();
+
+	}
+	/*
+	 * This method is to add Length and Width and Height of the product 
+	 */
+	public void productSize() throws InterruptedException {
+		Thread.sleep(5000);
+		WebElement length=session.driver.findElement(By.xpath("//*[@id=\"artistaddmycoolection\"]/div/div/div/div/div[2]/div/div[7]/div/div[1]/div/div[5]"));
+		WebElement Width=session.driver.findElement(By.xpath("//*[@id=\"artistaddmycoolection\"]/div/div/div/div/div[2]/div/div[7]/div/div[2]/div/div[5]"));
+		WebElement height=session.driver.findElement(By.xpath("//*[@id=\"artistaddmycoolection\"]/div/div/div/div/div[2]/div/div[7]/div/div[3]/div/div[5]"));
+		Actions action= new Actions(session.driver);
+		action.dragAndDropBy(length, 60, 10).perform();
+		action.dragAndDropBy(Width, 60, 10).perform();
+		action.dragAndDropBy(height, 70, 10).perform();
+
+	}
+	/*
+	 * This method is to add quantity of the product
+	 */
+	public void quantity() {
+		element("quantity").sendKeys("1");
+
+	}
+	/*
+	 * This method is to add pre order days 
+	 */
+	public void PreOrderdays() {
+		element("PreOrderdays").sendKeys("10");
+
+	}
+	/*
+	 * This method is to add Maximum no. of items per parcel
+	 */
+	public void maxItem() {
+		element("maxItem").sendKeys("3");
+	}
+	/*
+	 * This method is to logout shop page
+	 */
+	public void shopPageLogout() throws InterruptedException {
+		Thread.sleep(5000);
+		element("shopPageLogout").click();
+	}
+	/*
+	 * This method is to click on art type Radio button
+	 */
+	public void artTypeRadioButton() {
+		element("artTypeRadioButton").click();
+	}
+
+	public void imageSubmit() {
+		element("imageSubmit").click();
+		
+	}
 }
+
+
+
 
 
 

@@ -56,8 +56,8 @@ elements:
     findBy: xpath
     locator: //*[@id="btn_send"]
   chooseFile:
-    findBy: xpath
-    locator: //*[@id="myFile"]
+    findBy: cssSelector
+    locator: label[for='myFile']
   logout:
     findBy: xpath
     locator: //*[@id="main"]/section/div/div/div[2]/ul/li[7]/a[2]/span
@@ -120,4 +120,100 @@ elements:
     locator: //*[@id="artlisting"]/div/div/div/div/div[1]/a/button
   addedToCart:
     findBy: xpath
-    locator: //*[@id="notification"]/i                                                 
+    locator: //*[@id="notification"]/i
+  clickOnOrder:
+    findBy: xpath
+    locator: //*[@id="main"]/section/div/div/div[2]/ul/li[2]/a
+  clickOnSelect:
+    findBy: xpath
+    locator: //*[@id="inlineFormCustomSelect"]
+  clickOnGo:
+    findBy: xpath
+    locator: //*[@id="go_btn"]/button
+  clickOn:
+    findBy: id
+    locator: yes
+  clickSelectType:
+    findBy: xpath
+    locator: //*[@id="inlineFormCustomSelect"]/option[6]
+  ClickRefund:
+    findBy: xpath
+    locator: //*[@id="main"]/section/div/div/div[2]/ul/li[3]/a
+  refundStatus:
+    findBy: xpath
+    locator: //*[@id="refunds_data"]/div[1]/table/thead/tr/th[7]
+  nextPage:
+    findBy: xpath
+    locator: //*[@id="refunds_data"]/div[2]/ngb-pagination/ul/li[4]/a
+  actionButton:
+    findBy: xpath
+    locator: //*[@id="action9"]
+  clickApprove:
+    findBy: xpath
+    locator: //*[@id="approve01"]
+  clickQTYbutton:
+    findBy: xpath
+    locator: //*[@id="refundDetails"]/div/div/div[2]/div/table[2]/tbody/tr/td[2]/input
+  commentBox:
+    findBy: xpath
+    locator: //*[@id="refundDetails"]/div/div/div[2]/form/div[2]/textarea
+  myShopButton:
+    findBy: xpath
+    locator: //*[@id="main"]/section/div/div/div[2]/ul/li[2]/a
+  shoppage:
+    findBy: xpath
+    locator: //*[@id="main"]/div[1]/div/div/div/div[2]/div[3]/button
+  newCollectionButton:
+    findBy: xpath
+    locator: //*[@id="main"]/section/div/div/div[2]/ul/li[1]/a
+  addCollectionButton:
+    findBy: xpath
+    locator: //*[@id="artistmycollection"]/div/div[1]/div/a
+  productImage:
+    findBy: xpath
+    locator: //*[@id="myFile"]
+  productTitle:
+    findBy: xpath
+    locator: //*[@id="artistaddmycoolection"]/div/div/div/div/div[2]/div/div[1]/div/div[1]/input
+  costOfItem:
+    findBy: xpath
+    locator: //*[@id="price1"]
+  art:
+    findBy: xpath
+    locator: //*[@placeholder="Product Price (CAD)"]      
+  description:
+    findBy: xpath
+    locator: //*[@id="artistaddmycoolection"]/div/div/div/div/div[2]/div/div[2]/div[1]/textarea
+  weight:
+    findBy: xpath
+    locator: //*[@placeholder="Approx Weight"]
+  weightType:
+    findBy: xpath
+    locator: //*[@id="text1"]/option[3]      
+  updatePrice:
+    findBy: xpath
+    locator: //*[@id="artistaddmycoolection"]/div/div/div/div/div[2]/div/div[2]/div[2]/div[6]/div[2]
+  length:
+    findBy: xpath
+    locator: //*[@id="artistaddmycoolection"]/div/div/div/div/div[2]/div/div[7]/div/div[1]/div/div[5]
+  quantity:
+    findBy: xpath
+    locator: //*[@id="quantity1"]
+  maxItem:
+    findBy: xpath
+    locator: //*[@placeholder="Maximum shipment quantity per box"]
+  artTypeRadioButton:
+    findBy: xpath
+    locator: //*[@id="val1"]         
+  PreOrderdays:
+    findBy: xpath
+    locator: (//input[@id='days1'])[1]                     
+  collectionSubmitButton:
+    findBy: xpath
+    locator: //*[@id="btn_send"]
+  shopPageLogout:
+    findBy: xpath
+    locator: //*[@id="main"]/section/div/div/div[2]/ul/li[9]/a[2]/span
+  imageSubmit:
+    findBy: xpath
+    locator: /html/body/ngb-modal-window/div/div/app-image-cropper/div[3]/button                                                                                                                                

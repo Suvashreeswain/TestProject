@@ -110,3 +110,62 @@ Feature: Amazon Home Page
      Then Verify item added to cart
      When Click on DashBoard button	
      And Click on Artist pagelogs out button
+     
+     @BiskaneOrdersAndShippedItems 
+     Scenario: Test scenario in BiskaneShopPage
+     Given User go to Biskane page url
+     When User enter data into email field
+     And User enter data into artist password field
+     When User click on SignIn
+     Then Verify Dashboard page
+     When User click on orders
+     And User click on select search type
+     When Click on select from drop down
+     #And Click on Ok button
+     When Click on Go button
+     And Click on Artist pagelogs out button
+     
+     @BiskaneRefunds
+     Scenario: Test scenario in BiskaneShopPage
+     Given User go to Biskane page url
+     When User enter data into email field
+     And User enter data into artist password field
+     When User click on SignIn
+     Then Verify Dashboard page
+     When Click on refunds button
+     Then Verify refund status
+     And Click on next page button
+     When Click on refund pending action button
+     And Add QTY No of item to refund 
+     When Enter text to comment box
+     And Click on Approve button
+     #And Click on Artist pagelogs out button
+     
+     @BiskaneStorePage
+     Scenario: Test scenario in BiskaneStorePage
+     Given User go to Biskane page url
+     When User enter data into email field
+     And User enter password 
+     When User click on SignIn
+     Then Verify Dashboard page
+     When User click on my shop button
+     Then Verify my shop page
+     And Click on my collection button
+     When Click on add new collection button
+     And Add all the product details
+     #And Click on image submit button
+     When Add product title
+     And Select Art from product category
+     When Add product Description
+     And Add cost of the item
+     When Click on update price button
+     And Add Maximum no of items per parcel
+     And Select approx weight box
+     When Select option from weight type
+     And Add Quantity in quantity box
+     When Add PreOrder days
+     And Click on Art type radio button
+     And Add Length and Width and Height of the item
+     When Click on new collection submit button
+     And Click on shop page logs out button
+      
